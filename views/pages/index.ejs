@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>AdminLTE 2 | Mailbox</title>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+  <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="/lib/Ionicons/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="/lib/adminlte/css/AdminLTE.min.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins    
+       folder instead of downloading all of them to reduce the load. -->
+  <!--link rel="stylesheet" href="/adminlte/css/skins/_all-skins.min.css"-->
+
+  <!-- Material Design -->
+  <link rel="stylesheet" href="/lib/MaterialAdminLTE/css/bootstrap-material-design.min.css">
+  <link rel="stylesheet" href="/lib/MaterialAdminLTE/css/ripples.min.css">
+  <link rel="stylesheet" href="/lib/MaterialAdminLTE/css/MaterialAdminLTE.min.css">
+  <style>.check-all{padding-left: 3px;} .btn-icon{ padding: 8px 12px;}</style>
+  <!-- AdminLTE Material Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="/lib/MaterialAdminLTE/css/skins/all-md-skins.min.css">
+
+  <!-- bootstrap wysihtml5 - text editor -->
+  <link rel="stylesheet" href="/lib/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+</head>
+<body class="hold-transition skin-blue-light sidebar-mini">
+  <div class="wrapper">
+  
+    <% include ../partials/header %>
+    <% include ../partials/sidebar %>
+  
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper" id="content-main">
+      <!-- Content Header (Page header) -->
+      <!--section class="content-header col-md-3">
+        <div align="right">
+          <a href="compose.html" class="btn btn-danger btn-block">Compose</a>
+        </div>
+      </section-->
+  
+      <% include ../partials/mails %>
+    </div>
+    <!-- /.content-wrapper -->
+    <% include ../partials/footer %>
+    
+  </div>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="/lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="/lib/adminlte/js/adminlte.min.js"></script>
+
+  <!-- Material Design -->
+  <script src="/lib/MaterialAdminLTE/js/material.min.js"></script>
+  <script src="/lib/MaterialAdminLTE/js/ripples.min.js"></script>
+  <script>
+    $.material.init();
+  </script>
+  <script src="/javascripts/ucumari.js"></script>
+  <script>
+  $(function () {
+    $(".checkbox-toggle").click(function () {
+      $(".mailbox-messages input[type='checkbox'], .check-all input[type='checkbox']").prop('checked', $(this).is(':checked'));
+    });
+  });
+  </script>
+  </body>
+  </html>
