@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var imap = require('../service/imap');
 
 router.get('/', function(req, res, next) {
   res.render('pages/index', { title: 'Hola Crisito montes y Jennifer' });
